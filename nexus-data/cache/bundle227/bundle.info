@@ -1,6 +1,6 @@
 227
-mvn:com.sonatype.nexus.plugins/nexus-proui-plugin/3.4.0-02
+reference:file:system/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.9.2/jackson-dataformat-smile-2.9.2.jar
 32
 200
-1501202995813
+1582142117493
 0

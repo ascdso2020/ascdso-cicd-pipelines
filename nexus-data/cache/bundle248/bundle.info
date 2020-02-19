@@ -1,6 +1,6 @@
 248
-wrap:mvn:org.sonatype.sisu/sisu-odata4j/0.0.7
+reference:file:system/com/sonatype/nexus/nexus-licensing-extension/3.21.1-01/nexus-licensing-extension-3.21.1-01.jar
 32
 200
-1501202998093
+1582142128021
 0

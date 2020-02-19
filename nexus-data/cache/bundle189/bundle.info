@@ -1,6 +1,6 @@
 189
-mvn:org.apache.maven.indexer/indexer-reader/5.1.2-816025a
+wrap:file:system/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar
 32
 80
-1501202988120
+1582141921676
 0

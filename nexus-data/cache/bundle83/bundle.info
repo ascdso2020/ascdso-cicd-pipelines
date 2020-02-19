@@ -1,6 +1,6 @@
 83
-wrap:mvn:org.apache.httpcomponents/httpcore/4.4.6$Bundle-SymbolicName=httpcore
+wrap:file:system/org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0.jar$overwrite=merge&Import-Package=*;resolution:=optional
 32
 80
-1501202965557
+1582141890010
 0

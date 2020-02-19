@@ -1,6 +1,6 @@
 97
-wrap:mvn:com.sun.xml.bind/jaxb-impl/2.2.7$Bundle-SymbolicName=jaxb-impl&Fragment-Host=jaxb-core
-2
+reference:file:system/javax/interceptor/javax.interceptor-api/1.2/javax.interceptor-api-1.2.jar
+32
 80
-1501202966134
+1582141896425
 0

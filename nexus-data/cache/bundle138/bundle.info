@@ -1,6 +1,6 @@
 138
-mvn:org.sonatype.nexus/nexus-email/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-plugin-api/3.21.1-01/nexus-plugin-api-3.21.1-01.jar
 32
 80
-1501202967924
+1582141910813
 0

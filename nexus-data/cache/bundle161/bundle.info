@@ -1,6 +1,6 @@
 161
-mvn:org.sonatype.nexus/nexus-upgrade/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-base/3.21.1-01/nexus-base-3.21.1-01.jar
 32
 80
-1501202968911
+1582141915054
 0

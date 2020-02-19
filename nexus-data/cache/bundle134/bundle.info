@@ -1,6 +1,6 @@
 134
-mvn:org.sonatype.nexus/nexus-capability/3.4.0-02
-32
+reference:file:system/org/sonatype/nexus/nexus-validation/3.21.1-01/nexus-validation-3.21.1-01.jar
+2
 80
-1501202967790
+1582141909759
 0

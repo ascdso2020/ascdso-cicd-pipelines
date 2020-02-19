@@ -1,6 +1,6 @@
 235
-mvn:com.sonatype.nexus.plugins/nexus-repository-rubygems/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-script/3.21.1-01/nexus-script-3.21.1-01.jar
 32
 200
-1501202997194
+1582142124428
 0

@@ -1,6 +1,6 @@
 229
-mvn:com.sonatype.nexus.plugins/nexus-repository-bower/3.4.0-02
+wrap:file:system/com/vividsolutions/jts/1.13/jts-1.13.jar
 32
 200
-1501202995924
+1582142118420
 0

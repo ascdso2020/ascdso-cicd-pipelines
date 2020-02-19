@@ -1,6 +1,6 @@
 175
-wrap:mvn:net.jcip/jcip-annotations/1.0
+reference:file:system/org/sonatype/nexus/nexus-upgrade/3.21.1-01/nexus-upgrade-3.21.1-01.jar
 32
 80
-1501202969342
+1582141918354
 0

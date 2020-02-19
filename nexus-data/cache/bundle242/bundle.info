@@ -1,6 +1,6 @@
 242
-mvn:org.sonatype.nexus/nexus-rest-client/3.4.0-02
+reference:file:system/com/sonatype/nexus/plugins/nexus-analytics-plugin/3.21.1-01/nexus-analytics-plugin-3.21.1-01.jar
 32
 200
-1501202997795
+1582142126821
 0

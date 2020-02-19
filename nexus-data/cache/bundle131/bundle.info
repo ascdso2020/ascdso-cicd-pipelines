@@ -1,6 +1,6 @@
 131
-mvn:org.sonatype.nexus/nexus-blobstore-api/3.4.0-02
+reference:file:system/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar
 32
 80
-1501202967645
+1582141907559
 0

@@ -1,6 +1,6 @@
 110
-mvn:org.apache.shiro/shiro-core/1.3.2
+reference:file:system/org/sonatype/nexus/nexus-webresources-api/3.21.1-01/nexus-webresources-api-3.21.1-01.jar
 32
 80
-1501202966779
+1582141901147
 0

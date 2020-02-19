@@ -1,6 +1,6 @@
 170
-wrap:mvn:org.jboss.resteasy/resteasy-multipart-provider/3.1.3.Final$Bundle-SymbolicName=resteasy-multipart-provider&Fragment-Host=org.sonatype.nexus.siesta
-2
+reference:file:system/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar
+32
 80
-1501202969216
+1582141916624
 0

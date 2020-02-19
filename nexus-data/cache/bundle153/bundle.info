@@ -1,6 +1,6 @@
 153
-mvn:org.sonatype.nexus/nexus-security/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-httpclient/3.21.1-01/nexus-httpclient-3.21.1-01.jar
 32
 80
-1501202968638
+1582141913768
 0

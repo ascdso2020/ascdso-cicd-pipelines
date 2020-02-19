@@ -1,6 +1,6 @@
 106
-mvn:org.apache.commons/commons-lang3/3.4
+reference:file:system/com/fasterxml/jackson/core/jackson-core/2.9.2/jackson-core-2.9.2.jar
 32
 80
-1501202966580
+1582141900267
 0

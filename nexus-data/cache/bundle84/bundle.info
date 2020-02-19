@@ -1,6 +1,6 @@
 84
-mvn:io.swagger/swagger-annotations/1.5.12
+reference:file:system/org/sonatype/nexus/nexus-extender/3.21.1-01/nexus-extender-3.21.1-01.jar
 32
-80
-1501202965618
+100
+1582141894548
 0

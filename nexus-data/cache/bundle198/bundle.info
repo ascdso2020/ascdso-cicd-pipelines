@@ -1,6 +1,6 @@
 198
-mvn:org.sonatype.nexus.plugins/nexus-blobstore-compact/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-rapture/3.21.1-01/nexus-rapture-3.21.1-01.jar
 32
 80
-1501202991093
+1582141924162
 0

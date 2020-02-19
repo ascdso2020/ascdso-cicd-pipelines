@@ -1,6 +1,6 @@
 68
-mvn:com.google.inject.extensions/guice-multibindings/4.1.0
+wrap:file:system/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar$overwrite=merge&Fragment-Host=org.hibernate.validator
 2
 80
-1501202963366
+1582141864707
 0

@@ -1,6 +1,6 @@
 101
-mvn:commons-collections/commons-collections/3.2.2
+wrap:file:system/org/sonatype/gossip/gossip-bootstrap/1.8/gossip-bootstrap-1.8.jar
 32
 80
-1501202966387
+1582141897695
 0

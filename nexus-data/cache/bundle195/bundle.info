@@ -1,6 +1,6 @@
 195
-mvn:org.sonatype.nexus/nexus-core/3.4.0-02
+reference:file:system/org/yaml/snakeyaml/1.18/snakeyaml-1.18.jar
 32
 80
-1501202990961
+1582141923558
 0

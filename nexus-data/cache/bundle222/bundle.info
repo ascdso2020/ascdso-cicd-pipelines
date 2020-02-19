@@ -1,6 +1,6 @@
 222
-mvn:com.sonatype.nexus.plugins/nexus-healthcheck-oss-plugin/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-core/3.21.1-01/nexus-core-3.21.1-01.jar
 32
 200
-1501202995460
+1582142115557
 0

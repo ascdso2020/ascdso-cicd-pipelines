@@ -1,6 +1,6 @@
 186
-mvn:com.sun.mail/javax.mail/1.5.2
+reference:file:system/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_2.0_spec/1.0.1.Beta1/jboss-jaxrs-api_2.0_spec-1.0.1.Beta1.jar
 32
 80
-1501202987798
+1582141920857
 0

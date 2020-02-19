@@ -1,6 +1,6 @@
 144
-mvn:org.sonatype.nexus/nexus-jmx/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-blobstore-file/3.21.1-01/nexus-blobstore-file-3.21.1-01.jar
 32
 80
-1501202968114
+1582141911843
 0

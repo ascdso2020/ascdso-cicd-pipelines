@@ -1,6 +1,6 @@
 111
-mvn:org.apache.shiro/shiro-guice/1.3.2
-32
+reference:file:system/org/sonatype/nexus/nexus-mime/3.21.1-01/nexus-mime-3.21.1-01.jar
+2
 80
-1501202966830
+1582141901317
 0

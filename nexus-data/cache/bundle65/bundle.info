@@ -1,6 +1,6 @@
 65
-mvn:com.google.guava/guava/21.0
+mvn:org.sonatype.nexus/nexus-bootstrap/3.21.1-01
 32
 80
-1501202962988
+1582141825847
 0

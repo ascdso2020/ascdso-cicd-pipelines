@@ -1,6 +1,6 @@
 53
-mvn:com.codahale.metrics/metrics-jvm/3.0.2
+reference:file:system/org/apache/karaf/log/org.apache.karaf.log.core/4.2.6/org.apache.karaf.log.core-4.2.6.jar
 32
-80
-1501202962450
+30
+1582141722735
 0

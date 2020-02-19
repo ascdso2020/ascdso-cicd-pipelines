@@ -1,6 +1,6 @@
 150
-mvn:org.sonatype.nexus/nexus-rest/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-email/3.21.1-01/nexus-email-3.21.1-01.jar
 32
 80
-1501202968562
+1582141913423
 0

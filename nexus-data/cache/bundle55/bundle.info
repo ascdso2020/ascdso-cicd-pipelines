@@ -1,6 +1,6 @@
 55
-mvn:com.codahale.metrics/metrics-servlets/3.0.2
+reference:file:system/org/apache/karaf/service/org.apache.karaf.service.core/4.2.6/org.apache.karaf.service.core-4.2.6.jar
 32
-80
-1501202962486
+30
+1582141724273
 0

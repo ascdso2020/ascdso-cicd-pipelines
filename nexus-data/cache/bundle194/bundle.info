@@ -1,6 +1,6 @@
 194
-mvn:org.sonatype.nexus.bundles/org.sonatype.nexus.bundles.elasticsearch/3.4.0-02
+reference:file:system/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.2/jackson-dataformat-yaml-2.9.2.jar
 32
 80
-1501202988469
+1582141923182
 0

@@ -1,6 +1,6 @@
 181
-wrap:mvn:org.sonatype.gossip/gossip-bootstrap/1.8
+reference:file:system/org/sonatype/nexus/nexus-rest/3.21.1-01/nexus-rest-3.21.1-01.jar
 32
 80
-1501202969525
+1582141920301
 0

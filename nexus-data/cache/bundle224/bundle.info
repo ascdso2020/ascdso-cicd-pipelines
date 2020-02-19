@@ -1,6 +1,6 @@
 224
-mvn:com.sonatype.nexus.plugins/nexus-licensing-plugin/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-elasticsearch/3.21.1-01/nexus-elasticsearch-3.21.1-01.jar
 32
 200
-1501202995543
+1582142116556
 0

@@ -1,6 +1,6 @@
 90
-mvn:javax.enterprise/cdi-api/1.2
+reference:file:system/org/sonatype/nexus/nexus-common/3.21.1-01/nexus-common-3.21.1-01.jar
 32
 80
-1501202965917
+1582141895245
 0

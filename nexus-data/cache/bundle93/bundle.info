@@ -1,6 +1,6 @@
 93
-wrap:mvn:javax.validation/validation-api/1.1.0.Final$overwrite=merge&Fragment-Host=org.hibernate.validator
-2
+reference:file:system/org/apache/servicemix/bundles/org.apache.servicemix.bundles.aopalliance/1.0_6/org.apache.servicemix.bundles.aopalliance-1.0_6.jar
+32
 80
-1501202966016
+1582141895760
 0

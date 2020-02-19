@@ -1,6 +1,6 @@
 215
-wrap:mvn:org.apache.maven/maven-repository-metadata/3.3.3
+reference:file:system/org/sonatype/nexus/plugins/nexus-coreui-plugin/3.21.1-01/nexus-coreui-plugin-3.21.1-01.jar
 32
-80
-1501202992236
+200
+1582142113002
 0

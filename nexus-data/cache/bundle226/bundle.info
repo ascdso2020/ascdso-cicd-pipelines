@@ -1,6 +1,6 @@
 226
-mvn:com.sonatype.nexus.plugins/nexus-outreach-plugin/3.4.0-02
+reference:file:system/com/fasterxml/jackson/dataformat/jackson-dataformat-cbor/2.9.2/jackson-dataformat-cbor-2.9.2.jar
 32
 200
-1501202995771
+1582142117158
 0

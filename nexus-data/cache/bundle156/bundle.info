@@ -1,6 +1,6 @@
 156
-mvn:org.sonatype.nexus/nexus-ssl/3.4.0-02
+reference:file:system/org/sonatype/nexus/nexus-servlet/3.21.1-01/nexus-servlet-3.21.1-01.jar
 32
 80
-1501202968802
+1582141914223
 0

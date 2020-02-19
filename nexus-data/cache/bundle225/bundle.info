@@ -1,6 +1,6 @@
 225
-mvn:com.sonatype.nexus.plugins/nexus-migration-plugin/3.4.0-02
+reference:file:system/org/sonatype/nexus/bundles/org.sonatype.nexus.bundles.elasticsearch/3.21.1-01/org.sonatype.nexus.bundles.elasticsearch-3.21.1-01.jar
 32
 200
-1501202995594
+1582142116711
 0

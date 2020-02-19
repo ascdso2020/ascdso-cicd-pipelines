@@ -1,6 +1,6 @@
 107
-mvn:org.apache.geronimo.specs/geronimo-jcache_1.0_spec/1.0-alpha-1
+reference:file:system/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.9.2/jackson-datatype-joda-2.9.2.jar
 32
 80
-1501202966637
+1582141900487
 0

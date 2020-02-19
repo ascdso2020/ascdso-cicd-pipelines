@@ -1,6 +1,6 @@
 92
-mvn:javax.mail/mail/1.4.7
+reference:file:system/org/eclipse/aether/aether-api/1.0.2.v20150114/aether-api-1.0.2.v20150114.jar
 32
 80
-1501202965955
+1582141895603
 0

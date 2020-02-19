@@ -1,6 +1,6 @@
 228
-mvn:com.sonatype.nexus.plugins/nexus-proximanova-plugin/3.4.0-02
+reference:file:system/org/hdrhistogram/HdrHistogram/2.1.6/HdrHistogram-2.1.6.jar
 32
 200
-1501202995855
+1582142118143
 0

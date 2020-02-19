@@ -1,6 +1,6 @@
 66
-mvn:com.google.inject/guice/4.1.0
+wrap:mvn:uk.org.lidalia/sysout-over-slf4j/1.0.2
 32
 80
-1501202963267
+1582141826024
 0

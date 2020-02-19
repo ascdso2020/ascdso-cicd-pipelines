@@ -1,6 +1,6 @@
 70
-mvn:com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru/1.4.1
+wrap:file:system/org/apache/httpcomponents/httpcore/4.4.9/httpcore-4.4.9.jar$Bundle-SymbolicName=httpcore
 32
 80
-1501202963415
+1582141866462
 0

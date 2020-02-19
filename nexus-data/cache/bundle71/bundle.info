@@ -1,6 +1,6 @@
 71
-mvn:com.orientechnologies/orientdb-client/2.2.22
-32
+wrap:file:system/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar$Bundle-SymbolicName=httpclient&Fragment-Host=httpcore
+2
 80
-1501202963442
+1582141869249
 0

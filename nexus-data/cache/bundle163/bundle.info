@@ -1,6 +1,6 @@
 163
-mvn:org.sonatype.nexus/nexus-webresources-api/3.4.0-02
+reference:file:system/io/dropwizard/metrics/metrics-httpclient/4.1.0/metrics-httpclient-4.1.0.jar
 32
 80
-1501202968951
+1582141915250
 0

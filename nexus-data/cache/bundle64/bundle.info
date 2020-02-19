@@ -1,6 +1,6 @@
 64
-mvn:com.google.code.gson/gson/2.3.1
+mvn:org.codehaus.plexus/plexus-interpolation/1.24
 32
 80
-1501202962940
+1582141825411
 0

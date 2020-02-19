@@ -1,6 +1,6 @@
 211
-wrap:mvn:c3p0/c3p0/0.9.1.1
+reference:file:system/com/orientechnologies/orientdb-jdbc/2.2.36/orientdb-jdbc-2.2.36.jar
 32
 80
-1501202991765
+1582141926649
 0

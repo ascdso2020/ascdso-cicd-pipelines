@@ -1,6 +1,6 @@
 88
-mvn:org.javassist/javassist/3.19.0-GA
-32
+reference:file:system/com/google/inject/extensions/guice-servlet/4.1.0/guice-servlet-4.1.0.jar
+2
 80
-1501202965792
+1582141895026
 0

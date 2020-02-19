@@ -1,6 +1,6 @@
 115
-mvn:org.eclipse.aether/aether-api/1.0.2.v20150114
+reference:file:system/org/sonatype/nexus/nexus-jmx/3.21.1-01/nexus-jmx-3.21.1-01.jar
 32
 80
-1501202967012
+1582141902100
 0
