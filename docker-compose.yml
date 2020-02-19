@@ -26,7 +26,7 @@ services:
           - ./chef-repo:/chef-repo
     ports:
       - "8888:8888"
-      - "22:22"
+      - "2222:22"
   abao:
     build: ./raml-files
     image: abao:latest
