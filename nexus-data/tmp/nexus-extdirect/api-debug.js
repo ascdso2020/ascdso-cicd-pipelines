@@ -161,13 +161,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'readGroupable'/*(org.sonatype.nexus.extdirect.model.StoreLoadParameters) => java.util.List */,
-        len: 1,
+        name: 'defaultWorkDirectory'/*() => org.sonatype.nexus.coreui.PathSeparatorXO */,
+        len: 0,
         formHandler: false
       },
       {
-        name: 'defaultWorkDirectory'/*() => org.sonatype.nexus.coreui.PathSeparatorXO */,
-        len: 0,
+        name: 'readGroupable'/*(org.sonatype.nexus.extdirect.model.StoreLoadParameters) => java.util.List */,
+        len: 1,
         formHandler: false
       },
       {
@@ -257,12 +257,12 @@ NX.direct.api.REMOTING_API = {
     ],
     coreui_Component: [
       {
-        name: 'canDeleteAsset'/*(String, String) => boolean */,
+        name: 'readAsset'/*(String, String) => org.sonatype.nexus.coreui.AssetXO */,
         len: 2,
         formHandler: false
       },
       {
-        name: 'readAsset'/*(String, String) => org.sonatype.nexus.coreui.AssetXO */,
+        name: 'canDeleteAsset'/*(String, String) => boolean */,
         len: 2,
         formHandler: false
       },
@@ -441,12 +441,12 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'updateAccount'/*(org.sonatype.nexus.coreui.UserAccountXO) => org.sonatype.nexus.coreui.UserAccountXO */,
+        name: 'updateRoleMappings'/*(org.sonatype.nexus.coreui.UserRoleMappingsXO) => org.sonatype.nexus.coreui.UserXO */,
         len: 1,
         formHandler: false
       },
       {
-        name: 'updateRoleMappings'/*(org.sonatype.nexus.coreui.UserRoleMappingsXO) => org.sonatype.nexus.coreui.UserXO */,
+        name: 'updateAccount'/*(org.sonatype.nexus.coreui.UserAccountXO) => org.sonatype.nexus.coreui.UserAccountXO */,
         len: 1,
         formHandler: false
       },

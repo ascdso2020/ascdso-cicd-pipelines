@@ -45,9 +45,9 @@
  */
 .jenkins-config-widgets {
   position: relative;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-bottom: none;
-  background: #eeeeee;
+  background: #eee;
   min-height: 2.5em;
   -webkit-border-top-left-radius: 3px;
   -moz-border-top-left-radius: 3px;
@@ -68,7 +68,7 @@
 .jenkins-config-widgets .showTabs:hover {
   opacity: 0.8;
   background: #bbb;
-  color: #eeeeee;
+  color: #eee;
   text-shadow: none;
 }
 .jenkins-config-widgets .find-container {
@@ -82,15 +82,15 @@
   right: 5px;
   top: 5px;
   cursor: pointer;
-  color: #cccccc;
-  text-shadow: #ffffff 0 1px 2px;
+  color: #ccc;
+  text-shadow: #fff 0 1px 2px;
   font-size: 0.85em;
   padding: 3px 7px;
   display: none;
 }
 .jenkins-config-widgets .form-config.tabBarFrame {
   position: relative;
-  border-bottom: solid 1px #cccccc;
+  border-bottom: solid 1px #ccc;
 }
 .jenkins-config-widgets .form-config.tabBarFrame .config-section-activators {
   margin: 0;
@@ -114,14 +114,14 @@
 }
 .jenkins-config-widgets .form-config.tabBarFrame .tabBar .tab:hover {
   background: #bbb;
-  color: #ffffff;
+  color: #fff;
 }
 .jenkins-config-widgets .form-config.tabBarFrame .tabBar .tab.active {
   background: #f9f9f9;
   color: #000;
   font-weight: bold;
   z-index: 2;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-bottom: 1px solid #f9f9f9;
 }
 .jenkins-config-widgets .form-config.tabBarFrame.mouse-over .noTabs {
@@ -131,7 +131,7 @@
   opacity: 0.8;
 }
 #jenkins .jenkins-config {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   padding: 10px;
   border-top: none;
   background: #f9f9f9;
@@ -161,7 +161,7 @@
 #jenkins .jenkins-config table .bottom-sticker-inner {
   padding: 20px 10px 25px 20px;
   border-top-right-radius: 10px;
-  border: 1px solid #aaccbb;
+  border: 1px solid #acb;
   background: rgba(245, 249, 239, 0.75);
 }
 #jenkins .jenkins-config table .bottom-sticker,
@@ -184,14 +184,14 @@
 }
 #jenkins .jenkins-config table .bottom-sticker .yui-button.primary button,
 #jenkins .jenkins-config table #bottom-sticker .yui-button.primary button {
-  background: #447788;
-  border-color: #335566;
+  background: #478;
+  border-color: #356;
 }
 #jenkins .jenkins-config table .bottom-sticker .yui-button.yui-button-disabled button,
 #jenkins .jenkins-config table #bottom-sticker .yui-button.yui-button-disabled button {
-  background: #eeeeee;
-  border-color: #cccccc;
-  color: #cccccc;
+  background: #eee;
+  border-color: #ccc;
+  color: #ccc;
 }
 #jenkins .jenkins-config table .bottom-sticker .yui-button,
 #jenkins .jenkins-config table #bottom-sticker .yui-button {
@@ -200,8 +200,8 @@
 #jenkins .jenkins-config table .bottom-sticker .yui-button button,
 #jenkins .jenkins-config table #bottom-sticker .yui-button button {
   padding: 5px 20px;
-  background: #ccddee;
-  border-color: #6699cc;
+  background: #cde;
+  border-color: #69c;
 }
 #jenkins .jenkins-config table .section-header {
   margin: 30px 0px 5px -10px;
@@ -225,7 +225,7 @@
 #jenkins .jenkins-config table td.setting-main input[type='radio'],
 #jenkins .jenkins-config table td.setting-main input[type='checkbox'] {
   position: relative;
-  top: .33em;
+  top: 0.33em;
 }
 #jenkins .jenkins-config table td {
   padding: 5px;
@@ -255,9 +255,9 @@
   height: 2.25em;
   line-height: 2.25em;
 }
-#jenkins .jenkins-config table td select {
+#jenkins .jenkins-config table td select:not(.select-ajax-pending) {
   border-radius: 0;
-  background: #ffffff;
+  background: #fff;
 }
 #jenkins .jenkins-config table td .help {
   background: rgba(255, 255, 255, 0.75);
@@ -302,17 +302,17 @@
   padding: 0 5px;
 }
 #jenkins .jenkins-config table .CodeMirror {
-  background: #ffffff;
+  background: #fff;
 }
 #jenkins .jenkins-config table .CodeMirror-scroll {
-  border: 1px solid #cccccc !important;
+  border: 1px solid #ccc !important;
 }
 #jenkins .jenkins-config table .repeated-container > .repeated-chunk {
   padding-top: 15px;
 }
 #jenkins .jenkins-config table .repeated-chunk.hover {
-  border-color: #6699cc;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), inset 0 200px 200px -200px #ffffff;
+  border-color: #69c;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), inset 0 200px 200px -200px #fff;
   position: relative;
   z-index: 2;
 }
@@ -345,7 +345,7 @@
   -moz-border-top-right-radius: 0 !important;
   border-top-right-radius: 0 !important;
   background-color: #d24939;
-  color: #eeeeee;
+  color: #eee;
   border: 1px solid #be3a2b;
   line-height: 12px !important;
   display: inline-block;
@@ -355,7 +355,7 @@
 #jenkins .jenkins-config table .repeatable-delete button:hover {
   background-color: #a23225;
   border-color: #942e22;
-  color: #ffffff;
+  color: #fff;
 }
 #jenkins .jenkins-config table .repeatable-delete button:before {
   content: 'X';
@@ -374,9 +374,9 @@
   background-color: #ffff00;
 }
 #ygddfdiv {
-  background: #eeeeee;
-  border: 1px solid #6699cc !important;
-  opacity: .5;
+  background: #eee;
+  border: 1px solid #69c !important;
+  opacity: 0.5;
 }
 .yui-skin-sam .yuimenu {
   z-index: 9999 !important;
@@ -438,6 +438,9 @@
   border-color: #335566;
   color: #eeeeee;
   cursor: pointer;
+}
+#add-item-panel form > .footer .btn-decorator button[type=submit]:active:not(.disabled) {
+  box-shadow: inset 0px 1px 6px 2px #1b2b33;
 }
 #add-item-panel form > .footer .btn-decorator button[type=submit].disabled {
   background-color: #ccc;
@@ -513,7 +516,7 @@
   background: #ffffff;
   border: 1px solid #6699cc;
   border-radius: 50%;
-  opacity: .9;
+  opacity: 0.9;
 }
 #add-item-panel .icon img {
   position: relative;
@@ -543,26 +546,26 @@
   font-size: 175%;
   color: #ffffff;
   text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 1px;
-  opacity: .75;
+  opacity: 0.75;
 }
 #add-item-panel .default-icon .b {
   text-transform: lowercase;
 }
 #add-item-panel .c-D33833 {
   border: 1px solid #900;
-  box-shadow: inset #990000 0 0 1px, inset #ffffff 0 0 0 1px, 0 5px 3px -2px rgba(0, 0, 0, 0.25), inset -5px -5px 10px 2px #990033, inset -5px -10px 15px 14px #d33833;
+  box-shadow: inset #900 0 0 1px, inset #fff 0 0 0 1px, 0 5px 3px -2px rgba(0, 0, 0, 0.25), inset -5px -5px 10px 2px #903, inset -5px -10px 15px 14px #D33833;
 }
 #add-item-panel .c-6D6B6D {
   border: 1px solid #000;
-  box-shadow: inset #333333 0 0 1px, inset #ffffff 0 0 0 1px, 0 5px 3px -2px rgba(0, 0, 0, 0.25), inset -5px -5px 10px 2px #222222, inset -5px -10px 15px 14px #555555;
+  box-shadow: inset #333 0 0 1px, inset #fff 0 0 0 1px, 0 5px 3px -2px rgba(0, 0, 0, 0.25), inset -5px -5px 10px 2px #222, inset -5px -10px 15px 14px #555;
 }
 #add-item-panel .c-335061 {
   border: 1px solid #356;
-  box-shadow: inset #002244 0 0 1px, inset #ffffff 0 0 0 1px, 0 5px 3px -2px rgba(0, 0, 0, 0.25), inset -5px -5px 10px 2px #001122, inset -5px -10px 15px 14px #335061;
+  box-shadow: inset #024 0 0 1px, inset #fff 0 0 0 1px, 0 5px 3px -2px rgba(0, 0, 0, 0.25), inset -5px -5px 10px 2px #012, inset -5px -10px 15px 14px #335061;
 }
 #add-item-panel .c-49728B {
   border: 1px solid #036;
-  box-shadow: inset #003366 0 0 1px, inset #ffffff 0 0 0 1px, 0 5px 3px -2px rgba(0, 0, 0, 0.25), inset -5px -5px 10px 2px #003366, inset -5px -10px 15px 14px #49728b;
+  box-shadow: inset #036 0 0 1px, inset #fff 0 0 0 1px, 0 5px 3px -2px rgba(0, 0, 0, 0.25), inset -5px -5px 10px 2px #036, inset -5px -10px 15px 14px #49728B;
 }
 #add-item-panel .c-6699CC {
   border: 1px solid #6699cc;
@@ -635,10 +638,10 @@
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 .j-item-options li.active .icon {
   opacity: 1;
@@ -671,3 +674,4 @@
   left: 25px;
   display: none;
 }
+

@@ -495,7 +495,7 @@ function registerRegexpValidator(e,regexp,message) {
     e.onchange = function() {
         var set = oldOnchange != null ? oldOnchange.call(this) : false;
         if (this.value.match(regexp)) {
-            if (!set) this.targetElement.innerHTML = "";
+            if (!set) this.targetElement.innerHTML = "<div/>";
         } else {
             this.targetElement.innerHTML = "<div class=error>" + message + "</div>";
             set = true;
@@ -529,6 +529,16 @@ function makeButton(e,onclick) {
     Element.addClassName(be,clsName);
     if(n) // copy the name
         be.setAttribute("name",n);
+
+    // keep the data-* attributes from the source
+    var length = e.attributes.length;
+    for (var i = 0; i < length; i++) {
+        var attribute = e.attributes[i];
+        var attributeName = attribute.name;
+        if (attributeName.startsWith('data-')) {
+            btn._button.setAttribute(attributeName, attribute.value);
+        }
+    }
     return btn;
 }
 
@@ -695,8 +705,17 @@ var jenkinsRules = {
 
 // validate form values to be an integer
     "INPUT.number" : function(e) { registerRegexpValidator(e,/^(\d+|)$/,"Not an integer"); },
+    "INPUT.number-required" : function(e) { registerRegexpValidator(e,/^\-?(\d+)$/,"Not an integer"); },
+
+    "INPUT.non-negative-number-required" : function(e) {
+        registerRegexpValidator(e,/^\d+$/,"Not a non-negative number");
+    },
+
     "INPUT.positive-number" : function(e) {
         registerRegexpValidator(e,/^(\d*[1-9]\d*|)$/,"Not a positive integer");
+    },
+    "INPUT.positive-number-required" : function(e) {
+        registerRegexpValidator(e,/^[1-9]\d*$/,"Not a positive integer");
     },
 
     "INPUT.auto-complete": function(e) {// form field with auto-completion support 
@@ -719,6 +738,7 @@ var jenkinsRules = {
         };
         ac.prehighlightClassName = "yui-ac-prehighlight";
         ac.animSpeed = 0;
+        ac.formatResult = ac.formatEscapedResult;
         ac.useShadow = true;
         ac.autoSnapContainer = true;
         ac.delimChar = e.getAttribute("autoCompleteDelimChar");
@@ -1485,8 +1505,12 @@ function expandTextArea(button,id) {
         n = n.parentNode;
     }
 
-    n.parentNode.innerHTML = 
-        "<textarea rows=8 class='setting-input' name='"+field.name+"'>"+value+"</textarea>";
+    var parent = n.parentNode;
+    parent.innerHTML = "<textarea rows=8 class='setting-input'></textarea>";
+    var textArea = parent.childNodes[0];
+    textArea.name = field.name;
+    textArea.innerText = value;
+
     layoutUpdateCallback.call();
 }
 
@@ -1503,6 +1527,10 @@ function refreshPart(id,url) {
                         console.log("There's no element that has ID of " + id);
                         if (intervalID !== null)
                             window.clearInterval(intervalID);
+                        return;
+                    }
+                    if (!rsp.responseText) {
+                        console.log("Failed to retrieve response for ID " + id + ", perhaps Jenkins is unavailable");
                         return;
                     }
                     var p = hist.up();
@@ -1835,7 +1863,6 @@ function updateBuildHistory(ajaxUrl,nBuild) {
                     var wrap = blockWrap(buildDetails, buildControls);
                     indentMultiline(wrap);
                     Element.addClassName(wrap, "build-details-controls");
-                    $(displayName).setStyle({width: '100%'});
                     detailsOverflowParams = getElementOverflowParams(buildDetails); // recalculate
                     expandLeftWithRight(detailsOverflowParams, controlsOverflowParams);
                     setBuildControlWidths();
@@ -2363,6 +2390,7 @@ function createSearchBox(searchURL) {
     ac.typeAhead = false;
     ac.autoHighlight = false;
     ac.formatResult = ac.formatEscapedResult;
+    ac.maxResultsDisplayed = 25;
 
     var box   = $("search-box");
     var sizer = $("search-box-sizer");
@@ -2578,10 +2606,18 @@ function buildFormTree(form) {
                     addProperty(p, e.name.substring(r), e.value);
                 }
                 break;
-
+            case "password":
+                p = findParent(e);
+                addProperty(p, e.name, e.value);
+                // must be kept in sync with RedactSecretJsonForTraceSanitizer.REDACT_KEY
+                addProperty(p, "$redact", shortenName(e.name));
+                break;
             default:
                 p = findParent(e);
                 addProperty(p, e.name, e.value);
+                if (e.hasClassName("complex-password-field")) {
+                    addProperty(p, "$redact", shortenName(e.name));
+                }
                 break;
             }
         }
@@ -2714,105 +2750,6 @@ function loadScript(href,callback) {
     head.insertBefore( script, head.firstChild );
 }
 
-/**
- * Loads a dynamically created invisible IFRAME.
- */
-function createIframe(src,callback) {
-    var iframe = document.createElement("iframe");
-    iframe.src = src;
-    iframe.style.display = "none";
-
-    var done = false;
-    iframe.onload = iframe.onreadystatechange = function() {
-        if ( !done && (!this.readyState ||
-                this.readyState === "loaded" || this.readyState === "complete") ) {
-            done = true;
-            callback();
-        }
-    };
-
-    document.body.appendChild(iframe);
-    return iframe;
-}
-
-var downloadService = {
-    continuations: {},
-
-    download : function(id,url,info, postBack,completionHandler) {
-        var tag = {id:id,postBack:postBack,completionHandler:completionHandler,received:false};
-        this.continuations[id] = tag;
-
-        // use JSONP to download the data
-        function fallback() {
-            loadScript(url+"?id="+id+'&'+Hash.toQueryString(info));
-        }
-
-        if (window.postMessage) {
-            // try downloading the postMessage version of the data,
-            // if we don't receive postMessage (which probably means the server isn't ready with these new datasets),
-            // fallback to JSONP
-            tag.iframe = createIframe(url+".html?id="+id+'&'+Hash.toQueryString(info),function() {
-                window.setTimeout(function() {
-                    if (!tag.received)
-                        fallback();
-                },100); // bit of delay in case onload on our side fires first
-            });
-        } else {
-            // this browser doesn't support postMessage
-            fallback();
-        }
-
-        // NOTE:
-        //   the only reason we even try fallback() is in case our server accepts the submission without a signature
-        //   (which it really shouldn't)
-    },
-
-    /**
-     * Call back to postMessage
-     */
-    receiveMessage : function(ev) {
-        var self = this;
-        Object.values(this.continuations).each(function(tag) {
-            if (tag.iframe.contentWindow==ev.source) {
-                self.post(tag.id,JSON.parse(ev.data));
-            }
-        })
-    },
-
-    post : function(id,data) {
-        if (data==undefined) {
-            // default to id in data
-            data = id;
-            id = data.id;
-        }
-        var tag = this.continuations[id];
-        if (tag==undefined) {
-            console.log("Submission from update center that we don't know: "+id);
-            console.log("Likely mismatch between the registered ID vs ID in JSON");
-            return;
-        }
-        tag.received = true;
-
-        // send the payload back in the body. We used to send this in as a form submission, but that hits the form size check in Jetty.
-        new Ajax.Request(tag.postBack, {
-            contentType:"application/json",
-            encoding:"UTF-8",
-            postBody:Object.toJSON(data),
-            onSuccess: function() {
-                if(tag.completionHandler!=null)
-                    tag.completionHandler();
-                else if(downloadService.completionHandler!=null)
-                    downloadService.completionHandler();
-            }
-        });
-    }
-};
-
-// update center service. to remain compatible with earlier version of Jenkins, aliased.
-var updateCenter = downloadService;
-
-YAHOO.util.Event.addListener(window, "message", function(ev) { downloadService.receiveMessage(ev); })
-
 /*
 redirects to a page once the page is ready.
 
@@ -2841,7 +2778,7 @@ function applySafeRedirector(url) {
         new Ajax.Request(url, {
             method: "get",
             onFailure: function(rsp) {
-                if(rsp.status==503 && rsp.getHeader("X-Jenkins-Interactive")==null) {
+                if((rsp.status >= 502 && rsp.status <= 504) && rsp.getHeader("X-Jenkins-Interactive")==null) {
                   // redirect as long as we are still loading
                   window.setTimeout(statusChecker,5000);
                 } else {
@@ -2861,6 +2798,20 @@ function applySafeRedirector(url) {
 }
 
 // logic behind <f:validateButton />
+function safeValidateButton(yuiButton) {
+    var button = yuiButton._button;
+    var descriptorUrl = button.getAttribute('data-validate-button-descriptor-url');
+    var method = button.getAttribute('data-validate-button-method');
+    var checkUrl = descriptorUrl + "/" + method;
+
+    // optional, by default = empty string
+    var paramList = button.getAttribute('data-validate-button-with') || '';
+    
+    validateButton(checkUrl, paramList, yuiButton);
+}
+
+// this method should not be called directly, only get called by safeValidateButton
+// kept "public" for legacy compatibility
 function validateButton(checkUrl,paramList,button) {
   button = button._button;
 

@@ -152,13 +152,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'readGroupable',
-        len: 1,
+        name: 'defaultWorkDirectory',
+        len: 0,
         formHandler: false
       },
       {
-        name: 'defaultWorkDirectory',
-        len: 0,
+        name: 'readGroupable',
+        len: 1,
         formHandler: false
       },
       {
@@ -248,12 +248,12 @@ NX.direct.api.REMOTING_API = {
     ],
     coreui_Component: [
       {
-        name: 'canDeleteAsset',
+        name: 'readAsset',
         len: 2,
         formHandler: false
       },
       {
-        name: 'readAsset',
+        name: 'canDeleteAsset',
         len: 2,
         formHandler: false
       },
@@ -432,12 +432,12 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'updateAccount',
+        name: 'updateRoleMappings',
         len: 1,
         formHandler: false
       },
       {
-        name: 'updateRoleMappings',
+        name: 'updateAccount',
         len: 1,
         formHandler: false
       },
